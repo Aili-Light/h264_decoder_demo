@@ -32,10 +32,10 @@ bool g_signal_recieved = false;
 
 void int_handler(int sig)
 {
-    // g_signal_recieved = true;
-    // printf("STOP SIGNAL\n");
-    // alg_sdk_decoder_stop();
-    // alg_sdk_decoder_deinit();
+    g_signal_recieved = true;
+    printf("STOP SIGNAL\n");
+    alg_sdk_decoder_stop();
+    alg_sdk_decoder_deinit();
 
     /* terminate program */
     exit(sig);
